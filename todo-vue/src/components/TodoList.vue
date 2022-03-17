@@ -20,7 +20,7 @@
     @change="checkAllTodos"> Check All</label></div>
     <div>{{ remaining }} items left</div>
 </div>
-</div> 
+</div>
 </template>
 
 <script>
@@ -36,16 +36,17 @@ export default {
        newTodo: '',
        idForTodo: 3,
        beforeEditCache: '',
+       filter: 'all',
        todos: [
            {
                'id': 1,
-               'title': 'Finish Vue Screencast',
+               'title': 'Learn Vue.js',
                completed: false,
                editing: false,
            },
             {
                'id': 2,
-               'title': 'Take over world',
+               'title': 'Learn Solid principles',
                completed: false,
                editing: false,
            }
@@ -58,8 +59,8 @@ export default {
      },
      anyRemaining() {
          return this.remaining != 0
-     }
-  },
+     },
+   },
  directives: {
     focus
   },
@@ -169,22 +170,5 @@ export default {
      padding-top: 14px;
      margin-bottom: 14px;
 }
-
-button {
-font-size: 14px;
-background-color: white;
-appearance: none;
-}
-button:hover {
-    background: lightgreen;
-}
-:focus {
-    outline: none;
-}
-
-.active {
-    background: lightgreen;
-}
-
 
 </style>
